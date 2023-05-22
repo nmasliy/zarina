@@ -1,0 +1,47 @@
+.timer {
+  &__items {
+    display: flex;
+    margin: 0 -10px;
+    font-weight: 700;
+    font-size: 26px;
+  }
+
+  &__item {
+    position: relative;
+    margin: 0 10px;
+    border-radius: 4px;
+    padding: 8px 10px 20px;
+    min-width: 54px;
+    line-height: 1;
+    text-align: center;
+    background-color: $dark-color;
+
+    &::before {
+      content: attr(data-title);
+      position: absolute;
+      left: 50%;
+      bottom: 6px;
+      display: block;
+      font-weight: 400;
+      font-size: 10px;
+      transform: translateX(-50%);
+    }
+
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      width: 6px;
+      height: 15px;
+      background: url("../img/timer-dots.svg") center no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__head {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

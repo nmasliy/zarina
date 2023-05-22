@@ -1,0 +1,19 @@
+// base
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "global";
+
+// components
+@import "./components/common";
+@import "./components/menu";
+@import "./components/header";
+@import "./components/footer";
+
+// sections
+@import "./components/sections/hero";
+@import "./components/sections/who";
+@import "./components/sections/problems";
+@import "./components/sections/about";
+@import "./components/sections/mentor";
+@import "./components/sections/study";

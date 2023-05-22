@@ -1,0 +1,16 @@
+.nav {
+  > ul {
+    > li {
+      @include mr(42px);
+
+      > a {
+        display: inline-block;
+        transition: color $transition;
+
+        @include hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

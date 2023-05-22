@@ -1,0 +1,25 @@
+// root
+:root {
+  --content-width: 1240px;
+  --container-offset: 12px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+  --window-height: 100%;
+  --header-height: 100px;
+}
+
+// font
+$font-family: "Manrope", sans-serif;
+
+// transitions
+$transition: 0.25s ease-in-out;
+$menu-transition: 0.35s ease-in-out;
+$menu-breakpoint: 1024px;
+
+// colors
+$accent-color: #2e1c9b;
+$purple-color: #6148f8;
+$white-color: #f0f0f0;
+$black-color: #0a0a0a;
+$dark-color: #1f1f1f;
+$grey-color: #adadad;
+$primary-color: #f61d00;

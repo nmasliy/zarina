@@ -1,0 +1,39 @@
+<header class="header">
+  <div class="container">
+    <div class="header__inner">
+      {# Menu variant  #}
+      <a class="header__logo" href="#">
+        zarina <br> kaneskanova
+      </a>
+      <div class="menu">
+        <nav class="header__nav nav">
+          {% include "common/nav.njk" %}
+        </nav>
+        <button class="menu__close">
+          <img src="img/close-icon.svg" width="15" height="15" alt="Close icon">
+        </button>
+        <div class="header__date">4 мая</div>
+        <button class="header__btn btn-outline" data-modal-open="modal-1">Принять участие</button>
+      </div>
+      <button class="burger">
+        <span></span>
+      </button>
+      {# /Menu variant  #}
+    </div>
+  </div>
+  {# Mobile menu variant #}
+  <div class="burger-menu">
+    <nav class="burger-menu__nav nav">
+      {% include "common/nav.njk" %}
+    </nav>
+    <div class="burger-menu__socials socials">
+      {% include "common/socials.njk" %}
+    </div>
+    <button class="burger-menu__close">
+      <img src="img/close-icon.svg" width="15" height="15" alt="Close icon">
+    </button>
+  </div>
+  {# /Mobile menu variant #}
+
+  <div class="menu-overlay"></div>
+</header>

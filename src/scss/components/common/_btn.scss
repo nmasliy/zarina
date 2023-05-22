@@ -1,0 +1,49 @@
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 20px 47px;
+  font-weight: 600;
+  font-size: 18px;
+  color: $white-color;
+  background-color: $primary-color;
+  transition: $transition;
+  cursor: pointer;
+
+  @include hover {
+    &:hover {
+      box-shadow: 0 1px 25px rgba(246, 29, 0, 50%);
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:focus,
+  &:active {
+    box-shadow: none;
+    background-color: #bb1600;
+  }
+}
+
+.btn-outline {
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+  padding: 14px 32px;
+  font-weight: 500;
+  font-size: 15px;
+  color: $white-color;
+  background: transparent;
+  transition: $transition;
+  cursor: pointer;
+
+  @include hover {
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &:focus,
+  &:active {
+    box-shadow: none;
+    background-color: #bb1600;
+  }
+}

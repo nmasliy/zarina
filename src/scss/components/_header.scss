@@ -1,0 +1,58 @@
+.header {
+  padding: 15px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    margin-right: 80px;
+    font-family: "Unbounded", sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  &__nav {
+    margin-right: 20px;
+
+    > ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__date {
+    position: relative;
+    margin-right: 40px;
+    margin-left: auto;
+    padding-left: 46px;
+    font-weight: 500;
+    font-size: 20px;
+
+    &::before {
+      @include circle;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background-image: url("../img/calendar-icon.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+@media screen and (max-width: $menu-breakpoint) {
+  .header {
+    &__nav {
+      > ul {
+        display: block;
+      }
+    }
+  }
+}

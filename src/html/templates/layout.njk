@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  {% block head %}
+    {% include "head.njk" %}
+  {% endblock %}
+  <body>
+    <div class="page-wrapper">
+      {% block header %}
+        {% include "header.njk" %}
+      {% endblock %}
+      <main class="main">
+        {% block content %}{% endblock content %}
+      </main>
+      {% block footer %}
+        {% include "footer.njk" %}
+      {% endblock footer %}
+    </div>
+    {% block scripts %}
+      {% include "scripts.njk" %}
+    {% endblock %}
+  </body>
+</html>
