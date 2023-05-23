@@ -1,21 +1,27 @@
 .problems {
-  position: relative;
-  overflow: hidden;
-  border-radius: 24px;
-  padding: 100px 0;
-  background-color: rgba(255, 255, 255, 5%);
+  padding: 0 10px;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -760px;
-    width: 800px;
-    height: 800px;
-    background: #305396;
-    filter: blur(100px);
-    transform: translateX(-50%);
-    will-change: filter;
+  &__wrapper {
+    @include section-big;
+
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    padding: 100px 0;
+    background-color: rgba(255, 255, 255, 5%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -760px;
+      width: 800px;
+      height: 800px;
+      background: #305396;
+      filter: blur(100px);
+      transform: translateX(-50%);
+      will-change: filter;
+    }
   }
 
   &__inner {

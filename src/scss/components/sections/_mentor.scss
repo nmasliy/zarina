@@ -1,12 +1,17 @@
 .mentor {
-  @include flex-center;
+  padding: 0 10px;
 
-  position: relative;
-  border-radius: 24px;
-  padding: 120px 0 80px;
-  min-height: 650px;
-  background: url("../img/mentor-bg.svg") center no-repeat;
-  background-color: rgba(255, 255, 255, 5%);
+  &__wrapper {
+    @include section-big;
+    @include flex-center;
+
+    position: relative;
+    border-radius: 24px;
+    padding: 120px 0 80px;
+    min-height: 650px;
+    background: url("../img/mentor-bg.svg") center no-repeat;
+    background-color: rgba(255, 255, 255, 5%);
+  }
 
   &__inner {
     margin: 0 auto;

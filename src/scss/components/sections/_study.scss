@@ -1,51 +1,152 @@
 .study {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -249px;
+    top: -200px;
+    width: 250px;
+    height: 450px;
+    background: #e09871;
+    opacity: 0.5;
+    filter: blur(100px);
+    will-change: filter;
+  }
+
   &__inner {
   }
 
   &__title {
+    margin-bottom: 60px;
+    text-align: center;
   }
 
   &__list {
+    @include grid(4);
+
+    counter-reset: study;
+    margin-bottom: 70px;
   }
 
   &__item {
+    counter-increment: study;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #292929;
+    border-radius: 24px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 6%);
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -100px;
+      top: -145px;
+      width: 250px;
+      height: 150px;
+      background-color: #618de2;
+      filter: blur(100px);
+      will-change: filter;
+    }
   }
 
   &__num {
+    @include icon;
+
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 30px;
+
+    span::after {
+      content: "0" counter(study);
+    }
   }
 
   &__name {
+    margin-bottom: 14px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
   }
 
   &__text {
-  }
+    font-weight: 500;
+    color: $grey-color;
 
-  &__footer {
+    strong,
+    b {
+      color: $white-color;
+    }
   }
 }
 
 .progress-bar {
   &__row {
+    @include flex-center;
+
+    margin-bottom: 23px;
   }
 
   &__col {
+    margin: 0 20px;
   }
 
   &__num {
-  }
+    font-weight: 600;
+    font-size: 32px;
 
-  &__num--circle {
+    &--circle {
+      position: relative;
+      padding-left: 27px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 50%;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background-color: #465e8a;
+        transform: translateY(-50%);
+      }
+    }
+
+    &--sandy::before {
+      background-color: #e09871;
+    }
   }
 
   &__caption {
-  }
-
-  &__num--sandy {
+    font-weight: 600;
+    font-size: 14px;
   }
 
   &__line {
+    position: relative;
+    border-radius: 10px;
+    height: 12px;
+    background: #e09871;
   }
 
   &__fill {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px 0 0 10px;
+    height: 100%;
+    background: #465e8a;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 2px;
+      height: 37px;
+      background-color: $white-color;
+      transform: translateY(-50%);
+    }
   }
 }

@@ -1,0 +1,232 @@
+.program {
+  &__inner {
+    display: grid;
+    grid-template-columns: 479fr 736fr;
+    gap: 25px;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__tab {
+    @include mb(10px);
+  }
+}
+
+.program-tab {
+  border: 1px solid #333;
+  border-radius: 16px;
+  padding: 22px 20px;
+  color: $white-color;
+  cursor: pointer;
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    min-height: 40px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__icons {
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    position: relative;
+    padding-left: 40px;
+    font-weight: 600;
+
+    &::before {
+      @include circle(30px);
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__icon--date::before {
+    background-image: url("../img/calendar-icon.svg");
+  }
+
+  &__icon--clock {
+    display: none;
+
+    &::before {
+      background-image: url("../img/clock-icon.svg");
+    }
+  }
+
+  &__subject {
+    position: relative;
+    padding-left: 13px;
+    max-width: 250px;
+    font-weight: 600;
+    font-size: 14px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $accent-color;
+    }
+  }
+
+  &.is-active {
+    background-color: $white-color;
+
+    .program-tab {
+      &__subject {
+        font-weight: 700;
+        color: $accent-color;
+      }
+
+      &__title,
+      &__icon {
+        color: $black-color;
+      }
+    }
+  }
+}
+
+.program-content {
+  display: none;
+  border-radius: 24px;
+  height: 100%;
+  color: $black-color;
+  background-color: $white-color;
+
+  &__title {
+    position: relative;
+    padding-left: 13px;
+    font-weight: 800;
+    font-size: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3px;
+      height: 100%;
+      background-color: $accent-color;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d6d6d6;
+    padding: 24px 40px;
+  }
+
+  &__icons {
+    flex-shrink: 0;
+  }
+
+  &__icon {
+    @include mb(10px);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 38px;
+    min-height: 26px;
+    font-weight: 600;
+
+    &::before {
+      @include circle(30px);
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__icon--date::before {
+    background-image: url("../img/calendar-icon.svg");
+  }
+
+  &__icon--clock::before {
+    background-image: url("../img/clock-icon.svg");
+  }
+
+  &__main {
+    padding: 26px 40px 40px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 37px;
+    gap: 50px;
+  }
+
+  &__col {
+    max-width: 262px;
+
+    &:nth-child(2) {
+      max-width: 220px;
+    }
+  }
+
+  &__item {
+    @include mb(16px);
+
+    position: relative;
+    padding-left: 36px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      border: 6px solid  #c9c6df;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      background-color: $accent-color;
+    }
+  }
+
+  &__box {
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 24px;
+    background: rgba($black-color, 0.06);
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  &__box-title {
+    margin-bottom: 16px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &.is-active {
+    display: block;
+  }
+}

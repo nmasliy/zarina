@@ -21,11 +21,12 @@
       content: "";
       position: absolute;
       right: -100px;
-      bottom: -150px;
+      bottom: -145px;
       width: 250px;
       height: 150px;
       background-color: #618de2;
       filter: blur(100px);
+      will-change: filter;
     }
   }
 
