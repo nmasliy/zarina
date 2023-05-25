@@ -1,4 +1,4 @@
-const videoWrapper = document.querySelector('.about__video-wrapper')
+const videoWrapper = document.querySelector('.about__video')
 
 if (videoWrapper) {
   const video = videoWrapper.querySelector('video');

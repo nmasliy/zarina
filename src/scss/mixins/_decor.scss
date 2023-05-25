@@ -12,3 +12,23 @@
   width: 0;
   height: 0;
 }
+
+@mixin decor-1() {
+  content: "";
+  position: absolute;
+  width: 955px;
+  height: 560px;
+  background: url("../img/decor-1.svg") center no-repeat;
+  filter: blur(100px);
+  will-change: filter;
+}
+
+@mixin decor-2() {
+  content: "";
+  position: absolute;
+  width: 954px;
+  height: 362px;
+  background: url("../img/decor-2.svg") center no-repeat;
+  filter: blur(100px);
+  will-change: filter;
+}
